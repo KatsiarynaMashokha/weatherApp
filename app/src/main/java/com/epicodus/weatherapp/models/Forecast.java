@@ -1,24 +1,31 @@
-package com.epicodus.weatherapp;
+package com.epicodus.weatherapp.models;
+
+import org.parceler.Parcel;
 
 /**
  * Created by Guest on 10/17/17.
  */
 
+@Parcel
 public class Forecast {
-    private double minTemp;
-    private double maxTemp;
-    private double pressure;
-    private double humidity;
-    private String description;
-    private String iconUrl;
+    public double minTemp;
+    public double maxTemp;
+    public double pressure;
+    public double humidity;
+    public String description;
+    public String iconIndex;
 
-    public Forecast(double minTemp, double maxTemp, double pressure, double humidity, String description, String iconUrl) {
+    public Forecast() {
+
+    }
+
+    public Forecast(double minTemp, double maxTemp, double pressure, double humidity, String description, String iconIndex) {
         this.minTemp = minTemp;
         this.maxTemp = maxTemp;
         this.pressure = pressure;
         this.humidity = humidity;
         this.description = description;
-        this.iconUrl = iconUrl;
+        this.iconIndex = iconIndex;
     }
 
     public double getMinTemp() {
@@ -41,7 +48,7 @@ public class Forecast {
         return description;
     }
 
-    public String getIconUrl() {
-        return iconUrl;
+    public String getIconIndex() {
+        return iconIndex;
     }
 }
